@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+	<title>Egészségügyi Karperec Portál</title>
+	<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form runat="server">
+	<asp:ScriptManager ID="ScriptManager1" runat="server">
+		<Services>
+			<asp:ServiceReference Path="~/ClientServices.asmx" />
+		</Services>
+	</asp:ScriptManager>
+
+    <asp:PlaceHolder ID="EventCheckerHolder" runat="server" Visible="true">
+        <script type="text/javascript">
+
+            var app = Sys.Application;
+            var handled = false;
+            var oldNum = 0;
+
+            app.add_init(applicationInitHandler);
+
+            function applicationInitHandler(sender, args) {
+                StartChecking();
+            }
+
+            function StartChecking() {
+                ClientServices.GetNumberOfUnhandledEvents(OnGetNumberOfUnhandledEventsReady);
+            }
+            function OnGetNumberOfUnhandledEventsReady(result, userContext, methodName) {
+                var numberOfEvents_new = result;
+                if (numberOfEvents_new > 0) {
+                    if (!handled || numberOfEvents_new > oldNum) ShowEventPopup();
+                    $get("modalBody").innerHTML = numberOfEvents_new;
+                    oldNum = numberOfEvents_new;
+                }
+
+                // Start checking again
+                window.setTimeout(StartChecking, 2500);
+            }
+            function ShowEventPopup() {
+                document.getElementById('EventPopupPanel').style.display = 'block';
+                document.getElementById('EventPopupPanel').style.visibility = 'visible';
+                handled = false;
+            }
+            function HideEventPopup() {
+                document.getElementById('EventPopupPanel').style.display = 'none';
+                document.getElementById('EventPopupPanel').style.visibility = 'hidden';
+                handled = true;
+            }
+	    </script>
+    </asp:PlaceHolder>
+
+	<div class="page">
+		<div class="header">
+			<div class="title">
+				<h1>
+					Egészségügyi karperec portál
+				</h1>
+			</div>
+			<div class="loginDisplay">
+				<asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+					<AnonymousTemplate>
+						[<a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Bejelentkezés</a>]
+						<br />
+						<a href="~/Account/Register.aspx" ID="HeadRegisterLink" runat="server"><small><i>Regisztráció</i></small></a>
+					</AnonymousTemplate>
+					<LoggedInTemplate>
+						Üdvözöljük <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+						[ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Kijelentkezés" LogoutPageUrl="~/"/> ]
+					</LoggedInTemplate>
+				</asp:LoginView>
+			</div>
+			
+			<!-- Event checking updatepanel - only for Administrators -->
+			<asp:Panel ID="EventPopupPanel" runat="server">
+				<div id="modal" class="modal">
+					<div class="modalTop">
+						<div class="modalTitle">Új esemény</div>
+						<span style="CURSOR: hand" onclick="javascript:HideEventPopup();">
+							<asp:Image runat="server" ImageUrl="~/Images/close_vista.gif" BorderWidth="0" />
+						</span>
+					</div>
+					<div class="modalBody">
+						A rendszerbe <strong><span id="modalBody"></span></strong>&nbsp;db új esemény érkezett!
+						<br /><br />
+						Az eseménykezelő megnyitásához kattintson <asp:HyperLink runat="server" NavigateUrl="~/Admin/Events.aspx">IDE</asp:HyperLink>!
+					</div>
+				</div>
+			</asp:Panel>
+
+			<div class="clear hideSkiplink">
+				
+				<%--Sitemap based menu--%>
+				<asp:SiteMapDataSource ID="SiteMapDataSource1" SiteMapProvider="XmlSiteMapProvider" Runat="server" ShowStartingNode="false"/>
+				<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" DataSourceID="SiteMapDataSource1" />
+
+                <!-- Update Progress -->
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server" DynamicLayout="false">
+                    <ProgressTemplate>
+                        <asp:Image ID="updateProgressImage" runat="server" ImageUrl="~/Images/updateProgress.gif" />
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+			</div>
+		</div>
+		<div class="main">
+			<asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+		</div>
+		<div class="clear">
+		</div>
+	</div>
+	<div class="footer">
+		
+	</div>
+	</form>
+</body>
+</html>

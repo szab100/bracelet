@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Main activity -->
+    <string name="app_name">Karperec</string>
+    <string name="menu_options">Beállítások</string> 
+    <string name="menu_about">Névjegy</string>
+    <string name="menu_exit">Kilépés</string>
+    <string name="menu_measures">Mérések</string>
+    
+    <string name="app_version_prefix">Verzió:</string>
+    <string name="app_about">Névjegy</string>
+    <string name="app_about_description"></string>
+    
+    <string name="measures_title">Mérési értékek</string>
+    <string name="connection_state_title">Kapcsolat</string>
+    <string name="battery_level_title">Akkumulátor</string>
+    <string name="device_mac_title">Azonosító</string>
+    
+    <!-- Common strings -->
+    <string name="save">Mentés</string>
+    <string name="ok">Rendben</string>
+    <string name="cancel">Mégse</string>
+    
+    <!-- MeasureListActivity -->
+    <string name="measurelist_menu_refresh">Frissítés</string>
+    <string name="measurelist_menu_back">Vissza</string>
+    
+    <!--  DeviceListActivity -->
+    <string name="scanning">eszközök keresése...</string>
+    <string name="select_device">Eszköz keresése</string>
+    <string name="none_paired">Nincs párosított eszköz</string>
+    <string name="none_found">Nem található eszköz</string>
+    <string name="title_paired_devices">Párosított eszközök</string>
+    <string name="title_other_devices">Egyéb elérhető eszközök</string>
+    <string name="button_scan">Keresés</string>
+    
+    <!-- Options Menu -->
+    <string name="options_title">Beállítások</string>
+    <string name="options_tab_general">Általános</string>
+    <string name="options_tab_tolerance">Tolerancia</string>
+    <string name="options_tolerance_title">Tolerancia értékek</string>
+    <string name="options_tolerance_refresh">Frissítés most!</string>
+    <string name="options_general_server_title">Szerver beállítások</string>
+    <string name="options_general_device_title">Eszköz beállítások</string>
+    <string name="options_updateenable_title">Automatikus frissítés engedélyezése</string>
+    <string name="options_device_mac_title">Eszköz MAC: </string>
+    <string name="options_device_search">Eszköz keresése</string>
+    <string name="options_general_frequency_title">Frissítés gyakorisága:</string>
+    <string name="options_hint_username">Felhasználó</string>
+    <string name="options_hint_password">Jelszó</string>
+    <string name="options_saved_successfully">Beállítások elmentve..</string>
+    <string name="connect">Kapcsolódás</string>
+    
+    <!--  Update frequency spinner -->
+    <string name="frequencyTitle">Frissítési gyakoriság</string>
+    <string name="frequency1">1 perc</string>  
+    <string name="frequency2">5 perc</string>  
+    <string name="frequency3">15 perc</string>  
+    <string name="frequency4">30 perc</string>
+    <string name="frequency5">60 perc</string>
+    
+    <string name="not_connected">Nem kapcsolódott</string>
+    <string name="bt_not_enabled_leaving">Bluetooth nincs bekapcsolva. Kilépés..</string>
+    <string name="bt_not_available">Bluetooth nem támogatott</string>
+    <string name="title_connecting">kapcsolódás...</string>
+    <string name="title_connected_to">Kapcsolódva</string>
+    <string name="title_not_connected">Nincs kapcsolat</string>
+    
+    <!-- Panic Dialog -->
+    <string name="panic_occured">Pánik esemény történt!</string>
+    <string name="panic_alert_in_progress">Az esemény jelentése folyamatban van..</string>
+</resources>

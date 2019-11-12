@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:padding="10px"
+    android:layout_height="fill_parent" android:orientation="vertical">
+    <TableLayout 
+    	android:layout_width="fill_parent"
+    	android:id="@+id/tableLayoutMeasure"
+    	android:layout_height="wrap_content" 
+    	android:background="@drawable/roundedshape" android:stretchColumns="0">
+    	<TableRow android:id="@+id/tableRow1" 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="match_parent"
+    		android:gravity="center_horizontal"
+    		android:padding="10px">
+    		<TextView 
+    			android:layout_width="match_parent"
+    			android:gravity="center"
+    			android:textColor="#000000"
+    			android:text="@string/measures_title" 
+    			android:textSize="22px" />
+    	</TableRow>
+    	
+    	<TableRow android:id="@+id/tableRow1" 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="fill_parent">
+    			<LinearLayout
+    				android:id="@+id/layoutPulse"
+    				android:layout_width="wrap_content" 
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px">
+    				<ImageView 
+    					android:id="@+id/imageViewPulse"
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/heartrate"/>
+    				<TextView android:layout_width="70px" android:textColor="#000000" android:id="@+id/textViewPulse" android:text="180" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px"></TextView>
+    			</LinearLayout>
+    			<LinearLayout
+    				android:id="@+id/layoutTemp"
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="right" android:layout_width="wrap_content" android:layout_gravity="left|right" android:layout_marginRight="20px" android:paddingRight="5px" android:paddingBottom="10px" android:paddingTop="10px">
+    				<ImageView 
+    					android:id="@+id/imageViewTemp"
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/thermometer" />
+    				<TextView android:layout_width="70px" android:textColor="#000000" android:id="@+id/textViewTemp" android:text="200" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px"></TextView>
+    			</LinearLayout>
+    	</TableRow>
+		<TableRow android:id="@+id/tableRow2" 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="fill_parent">
+    			<LinearLayout
+    				android:id="@+id/layoutAcc"
+    				android:layout_width="wrap_content" 
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:layout_column="0" android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px">
+    				<ImageView 
+    					android:id="@+id/imageViewAcc"
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/speedometer" />
+    				<TextView android:layout_width="70px" android:textColor="#000000" android:id="@+id/textViewAcc" android:text="180" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px"></TextView>
+    			</LinearLayout>
+    			<LinearLayout
+    				android:id="@+id/layoutBlox"
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:clipToPadding="true" android:gravity="right" android:layout_width="wrap_content" android:layout_gravity="left|right" android:layout_marginRight="20px" android:paddingRight="5px" android:paddingBottom="10px" android:paddingTop="10px">
+    				<ImageView 
+    					android:id="@+id/imageViewBlox"
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/bloodoxygen" />
+    				<TextView android:layout_width="70px" android:textColor="#000000" android:id="@+id/textViewBlox" android:text="200" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px" />
+    			</LinearLayout>
+    	</TableRow>
+    </TableLayout>
+    
+    <!--  Device info -->
+    <TableLayout 
+    	android:layout_width="fill_parent"
+    	android:id="@+id/tableLayoutDevice"
+    	android:layout_height="fill_parent" 
+    	android:background="@drawable/roundedshape" android:stretchColumns="0" android:layout_marginTop="10px">
+    	<TableRow 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="match_parent"
+    		android:gravity="center_horizontal"
+    		android:padding="10px">
+    		<TextView 
+    			android:layout_width="match_parent"
+    			android:gravity="center"
+    			android:textColor="#000000"
+    			android:text="Eszköz információk" 
+    			android:textSize="22px" />
+    	</TableRow>
+    	<TableRow
+    		android:layout_height="wrap_content" 
+    		android:layout_width="fill_parent">
+			<LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/linearLayoutConnState" android:layout_width="wrap_content">
+				<ImageView 
+    					android:id="@+id/imageViewConnState"
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/connection" android:layout_gravity="left" android:paddingLeft="10px"/>
+    			<TextView android:gravity="left" android:text="@string/connection_state_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left|center_vertical" android:layout_marginLeft="10px"/>
+    		</LinearLayout>
+    		<TextView android:id="@+id/textViewConnState" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="left|center_vertical" android:text="@string/not_connected" android:paddingRight="5px"/>
+    	</TableRow>
+    	<TableRow android:layout_gravity="center_horizontal|fill_horizontal" android:layout_width="wrap_content" android:gravity="center_horizontal" android:layout_height="wrap_content">
+			<LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/linearLayoutBatteryLevel">
+				<ImageView 
+    					android:id="@+id/imageViewBatteryLevel"
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/battery" android:layout_gravity="left" android:paddingLeft="10px"/>
+    			<TextView android:gravity="left" android:text="@string/battery_level_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left|center_vertical" android:layout_marginLeft="10px"/>
+    		</LinearLayout>
+    		<TextView android:id="@+id/textViewBatteryLevel" android:layout_width="wrap_content" android:text="0 %" android:layout_height="wrap_content" android:paddingRight="5px" android:layout_gravity="left|center_vertical"/>
+    	</TableRow>
+    	<TableRow android:layout_gravity="center_horizontal|fill_horizontal" android:layout_width="wrap_content" android:gravity="center_horizontal" android:layout_height="wrap_content">
+			<LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/linearLayoutMacAddr">
+				<ImageView 
+    					android:id="@+id/imageViewMacAddr"
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/hardware" android:layout_gravity="left" android:paddingLeft="10px"/>
+    			<TextView android:gravity="left" android:text="@string/device_mac_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="left|center_vertical" android:layout_marginLeft="10px"/>
+    		</LinearLayout>
+    		<TextView android:id="@+id/textViewMacAddr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xx:xx:xx:xx:xx:xx" android:paddingRight="5px" android:layout_gravity="left|center_vertical"/>
+    	</TableRow>
+    </TableLayout>
+    	
+</LinearLayout>

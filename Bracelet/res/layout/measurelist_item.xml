@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="8px">
+        
+        <TableLayout 
+    		android:layout_height="wrap_content" 
+    		android:background="@drawable/roundedshape" android:layout_width="fill_parent" android:stretchColumns="0" android:layout_marginRight="5px">
+    		
+    		<TableRow 
+    			android:layout_height="wrap_content" 
+    			android:gravity="center_horizontal"
+    			android:padding="10px" android:layout_width="fill_parent">
+    			
+    			<LinearLayout
+	    				android:orientation="horizontal"
+	    				android:gravity="center" android:paddingLeft="10px" android:paddingTop="10px"
+	    				android:layout_span="2" android:layout_width="fill_parent" android:layout_height="50px">
+	    				
+    				<ImageView 
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/calendar"/>
+	    				
+		    		<TextView 
+		    			android:id="@+id/measure_date"
+		    			android:layout_height="wrap_content"
+		    			android:text="date"
+		    			android:gravity="center"
+		    			android:textColor="#000000" 
+		    			android:textSize="22px" android:layout_width="match_parent"/>
+		    	</LinearLayout>
+    		</TableRow>
+    		
+	    	<TableRow 
+	    		android:layout_height="wrap_content" android:layout_width="fill_parent">
+	    			<LinearLayout
+	    				android:layout_height="wrap_content"
+	    				android:orientation="horizontal"
+	    				android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_weight="1" android:layout_width="0dp">
+	    				<ImageView 
+	    					android:layout_height="wrap_content" 
+	    					android:layout_width="wrap_content"
+	    					android:src="@drawable/heartrate_small"/>
+	    				<TextView android:id="@+id/measure_pulse" android:layout_width="70px" android:textColor="#000000" android:text="180" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px"></TextView>
+	    			</LinearLayout>
+	    			<LinearLayout android:paddingBottom="10px" android:paddingTop="10px" android:orientation="horizontal" android:layout_height="wrap_content" android:paddingRight="5px" android:layout_marginRight="20px" android:layout_gravity="right" android:gravity="right" android:layout_weight="1" android:layout_width="0dp">
+	    				<ImageView android:src="@drawable/thermometer_small" android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageView>
+	    				<TextView android:id="@+id/measure_temp" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textColor="#000000" android:textSize="28px" android:layout_width="70px" android:text="200"></TextView>
+	    			</LinearLayout>
+	    	</TableRow>
+	    	<TableRow 
+	    		android:layout_height="wrap_content" android:layout_width="fill_parent">
+	    			<LinearLayout
+	    				android:layout_height="wrap_content"
+	    				android:orientation="horizontal"
+	    				android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_weight="1" android:layout_width="0dp">
+	    				<ImageView 
+	    					android:layout_height="wrap_content" 
+	    					android:layout_width="wrap_content"
+	    					android:src="@drawable/speedometer_small"/>
+	    				<TextView android:id="@+id/measure_acc" android:layout_width="70px" android:textColor="#000000" android:text="180" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px"></TextView>
+	    			</LinearLayout>
+	    			<LinearLayout
+	    				android:layout_height="wrap_content"
+	    				android:orientation="horizontal"
+	    				android:layout_marginRight="20px" android:paddingRight="5px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_gravity="right" android:gravity="right" android:layout_weight="1" android:layout_width="0dp">
+	    				<ImageView 
+	    					android:layout_height="wrap_content" 
+	    					android:layout_width="wrap_content"
+	    					android:src="@drawable/bloodoxygen_small" />
+	    				<TextView android:id="@+id/measure_blox" android:layout_width="70px" android:textColor="#000000" android:text="200" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px"></TextView>
+	    			</LinearLayout>
+	    	</TableRow>
+	    </TableLayout>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:id="@+id/tabGeneralLayout"
+    android:orientation="vertical" android:weightSum="1">
+    <TextView android:layout_width="wrap_content" android:text="@string/options_general_server_title" android:id="@+id/TextView01" android:layout_height="wrap_content" android:layout_marginTop="10px" android:layout_marginBottom="5px" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+    <EditText 
+    	android:layout_width="match_parent" android:id="@+id/editTextUsername" 
+    	android:layout_height="wrap_content" android:inputType="textPersonName" 
+    	android:hint="@string/options_hint_username" />
+    <EditText 
+    	android:layout_width="match_parent" android:id="@+id/editTextPassword" 
+    	android:layout_height="wrap_content" android:inputType="textPersonName" 
+    	android:hint="@string/options_hint_password" android:password="true"/>
+    <TextView 
+    	android:text="@string/options_general_frequency_title" android:id="@+id/textView2" android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" android:layout_marginTop="20px" android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <CheckBox android:text="@string/options_updateenable_title" android:id="@+id/checkBoxUpdateEnable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"></CheckBox>
+    <Spinner  
+	    android:id="@+id/SpinnerFrequency"
+	    android:layout_height="wrap_content"
+	    android:prompt="@string/frequencyTitle"  
+	    android:layout_width="fill_parent"
+	    android:entries="@array/frequencytypelist">
+	</Spinner>
+    <TextView android:layout_width="wrap_content" android:text="@string/options_general_device_title" android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_marginTop="10px" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+    <LinearLayout android:layout_width="match_parent" android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_marginTop="5px" android:layout_marginBottom="5px">
+        <TextView android:text="@string/options_device_mac_title" android:id="@+id/textView3" android:layout_gravity="left" android:layout_height="wrap_content" android:gravity="left" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="0dp" android:layout_weight="0.7"></TextView>
+        <TextView android:id="@+id/textViewDeviceMac" android:layout_gravity="right" android:layout_height="wrap_content" android:layout_marginLeft="15px" android:text="xx:xx:xx:xx:xx:xx" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="1" android:layout_width="0dp"></TextView>
+    </LinearLayout>
+    <Button android:id="@+id/buttonOptionsDeviceSearch" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/options_device_search"></Button>   
+
+</LinearLayout>
+

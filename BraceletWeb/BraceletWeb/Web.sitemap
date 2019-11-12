@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Home" roles="*">
+    <siteMapNode url="~/Default.aspx" title="Kezdőlap"  description="Kezdőlap" />
+    <siteMapNode url="~/About.aspx" title="Rólunk"  description="Bemutatkozunk.." />
+    <siteMapNode title="Felhasználók" roles="Member">
+      <siteMapNode url="~/Members/Members.aspx" title="Profil"  description="Felhasználói profil megtekintése, módosítása" />
+      <siteMapNode url="~/Members/Measures.aspx" title="Méréseim"  description="Saját mérések megtekintése" />
+      <siteMapNode url="~/Members/Events.aspx" title="Események"  description="Saját események megtekintése" />
+      <siteMapNode url="~/Members/Tolerances.aspx" title="Toleranciamaszkok"  description="Toleranciamaszk beállítás" />
+    </siteMapNode>
+    <siteMapNode title="Adminisztrátorok" roles="Administrator">
+      <siteMapNode url="~/Admin/Admin.aspx" title="Felhasználók kezelése"  description="Felhasználói fiókok és jogosultságok módosítása" />
+      <siteMapNode url="~/Admin/Measures.aspx" title="Felhasználók mérései"  description="Felhasználók méréseinek megtekintése" />
+      <siteMapNode url="~/Admin/Events.aspx" title="Események kezelése"  description="Felhasználók eseményeinek kezelése" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

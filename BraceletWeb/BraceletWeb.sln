@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BraceletWeb", "..\..\..\..\..\..\WebSites\BraceletWeb", "{50427FC1-41BD-4674-A402-8C3CDE8C7F9B}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/BraceletWeb"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\WebSites\BraceletWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\BraceletWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/BraceletWeb"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\WebSites\BraceletWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\BraceletWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60883"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.symlink.hu:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = ..\\..\\..\\..\\..\\..\\WebSites\\BraceletWeb
+		SccProjectName1 = BraceletWeb
+		SccLocalPath1 = ..\\..\\..\\..\\..\\..\\WebSites\\BraceletWeb
+		SccProjectEnlistmentChoice1 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50427FC1-41BD-4674-A402-8C3CDE8C7F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50427FC1-41BD-4674-A402-8C3CDE8C7F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50427FC1-41BD-4674-A402-8C3CDE8C7F9B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{50427FC1-41BD-4674-A402-8C3CDE8C7F9B}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

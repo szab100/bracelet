@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:id="@+id/tabToleranceLayout"
+    android:orientation="vertical">
+    <TextView android:layout_width="wrap_content" android:id="@+id/textView1" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/options_tolerance_title" />
+    <TableLayout android:layout_width="match_parent" android:id="@+id/tableLayout1" android:layout_height="wrap_content">
+        <!-- Pulse -->
+        <TableRow android:id="@+id/toleranceTableRow1" 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="fill_parent">
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_width="0dp" android:layout_weight="0.6">
+    				<ImageView 
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/heartrate"/>
+    			</LinearLayout>
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="right" android:layout_marginRight="20px" android:paddingRight="5px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_gravity="left|center_vertical" android:layout_weight="1" android:layout_width="0dp">
+    				
+    				<TextView android:textColor="#FFFFFF" android:id="@+id/toleranceTextViewPulseFrom" android:text="0" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="25px" android:layout_width="75px"/>
+    				<TextView android:layout_width="20px" android:textColor="#FFFFFF" android:text=" - " android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px" />
+    				<TextView android:textColor="#FFFFFF" android:id="@+id/toleranceTextViewPulseTo" android:text="0" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="25px" android:layout_width="75px"/>
+    			</LinearLayout>
+    	</TableRow>
+    	<!-- Temperature -->
+        <TableRow android:id="@+id/toleranceTableRow2" 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="fill_parent">
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_width="0dp" android:layout_weight="0.6">
+    				<ImageView 
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/thermometer"/>
+    			</LinearLayout>
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="right" android:layout_marginRight="20px" android:paddingRight="5px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_gravity="left|center_vertical" android:layout_weight="1" android:layout_width="0dp">
+    				
+    				<TextView android:textColor="#FFFFFF" android:id="@+id/toleranceTextViewTempFrom" android:text="0" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="25px" android:layout_width="75px"/>
+    				<TextView android:layout_width="20px" android:textColor="#FFFFFF" android:text=" - " android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px" />
+    				<TextView android:textColor="#FFFFFF" android:id="@+id/toleranceTextViewTempTo" android:text="0" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="25px" android:layout_width="75px"/>
+    			</LinearLayout>
+    	</TableRow>
+    	<!-- Acceleration -->
+        <TableRow android:id="@+id/toleranceTableRow3" 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="fill_parent">
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_width="0dp" android:layout_weight="0.6">
+    				<ImageView 
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/speedometer"/>
+    			</LinearLayout>
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="right" android:layout_marginRight="20px" android:paddingRight="5px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_gravity="left|center_vertical" android:layout_weight="1" android:layout_width="0dp">
+    				
+    				<TextView android:textColor="#FFFFFF" android:id="@+id/toleranceTextViewAcc" android:text="0" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="25px" android:layout_width="75px"/>
+    			</LinearLayout>
+    	</TableRow>
+    	<!-- BloodOxygen -->
+        <TableRow android:id="@+id/toleranceTableRow4" 
+    		android:layout_height="wrap_content" 
+    		android:layout_width="fill_parent">
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="left" android:layout_gravity="left" android:paddingLeft="10px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_width="0dp" android:layout_weight="0.6">
+    				<ImageView 
+    					android:layout_height="wrap_content" 
+    					android:layout_width="wrap_content"
+    					android:src="@drawable/bloodoxygen"/>
+    			</LinearLayout>
+    			<LinearLayout
+    				android:layout_height="wrap_content"
+    				android:orientation="horizontal"
+    				android:gravity="right" android:layout_marginRight="20px" android:paddingRight="5px" android:paddingBottom="10px" android:paddingTop="10px" android:layout_gravity="left|center_vertical" android:layout_weight="1" android:layout_width="0dp">
+    				
+    				<TextView android:textColor="#FFFFFF" android:id="@+id/toleranceTextViewBloxFrom" android:text="0" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="25px" android:layout_width="75px"/>
+    				<TextView android:layout_width="20px" android:textColor="#FFFFFF" android:text=" - " android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="28px" />
+    				<TextView android:textColor="#FFFFFF" android:id="@+id/toleranceTextViewBloxTo" android:text="0" android:gravity="center_vertical|center_horizontal" android:layout_height="fill_parent" android:textSize="25px" android:layout_width="75px"/>
+    			</LinearLayout>
+    	</TableRow>
+    </TableLayout>
+
+</LinearLayout>

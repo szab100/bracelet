@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/options"
+	   	  android:icon="@drawable/settings"
+          android:title="@string/menu_options" />
+          
+    <item android:id="@+id/measures"
+          android:icon="@drawable/measures"
+          android:title="@string/menu_measures" />
+          
+    <item android:id="@+id/about"
+          android:title="@string/menu_about"
+          android:icon="@drawable/about" />
+          
+    <item android:id="@+id/exit"
+    	  android:icon="@drawable/standby"
+          android:title="@string/menu_exit" />
+</menu>
